@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         verdeUnimed: '#00985c',
-        laranjaUnimed: '#F37920'
+        laranjaUnimed: '#F37920',
       },
       fontFamily: {
         'UnimedSans' : 'UnimedSans',
