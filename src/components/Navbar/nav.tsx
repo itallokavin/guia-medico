@@ -7,16 +7,16 @@ import { useState } from "react"
 
 
 export default function Nav({handleBuscaVisivel}:any){
-    const [iconeClicado, setIconeClicado] = useState(faBars);
+    const [iconeClicado, setIconeClicado] = useState(faTimes);
 
     function handleIconeClicado() {
-        setIconeClicado(iconeClicado === faBars ? faTimes : faBars);
+        setIconeClicado(iconeClicado === faTimes ? faBars : faTimes);
         handleBuscaVisivel();
     }
     return(
         <div className="bg-verdeUnimed h-[80px] flex items-center justify-between px-[5%]">
           <div className="hidden max-[768px]:block">
-            <FontAwesomeIcon icon={iconeClicado} style={{fontSize: 30}} color="white" onClick={handleIconeClicado}   />
+            <FontAwesomeIcon icon={iconeClicado} style={{fontSize: 30}} color="white" onClick={handleIconeClicado} beat className="cursor-pointer"/>
           </div>
           <div className="w-[140px] max-[768px]:w-[120px]">
             <Image alt="Unimed Logo" src={Logo}/>

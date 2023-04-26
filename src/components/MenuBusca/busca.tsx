@@ -29,27 +29,31 @@ export default function Busca(){
       };
 
     return(
-        <div className="min-w-[320px] w-2/12 max-md:w-full">
-            <div className="min-w-[320px] max-md:w-full my-5 text-center bg-verdeUnimed text-white p-2">
+        <div className="w-full ">
+            <div className=" rounded-2xl my-5 text-center bg-verdeUnimed text-white p-2">
                 <h2 className="text-2xl">Formulário de Busca</h2>
             </div>
-            <div className="min-w-[320px] max-md:w-full">
-                <Select label="Especialidade" options={options.especialidade} value={esp} onChange={setEsp} />
+            <div className="flex w-full">
+                <div className="w-full grid grid-cols-4 justify-items-center max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 ">
+                    <Select label="Especialidade" options={options.especialidade} value={esp} onChange={setEsp} />
+                    <Input  label="Prestador" value={prest} onChange={setPrest} />
+                    <div className="flex justify-between w-[270px] max-xl:mr-5 max-sm:mr-0 max-sm:w-full ">
+                        <Select label="Município" options={options.municipio} value={mun} onChange={setMun} width="70%"/>
+                        <Select label="UF" options={options.uf} value={uf} onChange={setUf} mr={0} width="25%"/>
+                    </div>
+                    <Select label="Área de atuação" options={options.plano} />
+                    <Select label="Tipo de Estabelecimento" options={options.plano} />
+                    <Select label="Plano" options={options.plano} value={plano} onChange={setPlano} />
+                    <div className="flex w-[270px] max-xl:mr-5 items-end justify-between  max-sm:w-full max-sm:mr-0">
+                        <Button label="Limpar" onclick={handleClear} color="#f37920" icon={faEraser} hIcon={20}/>
+                        <Button label="Buscar" color="#00985c" icon={faSearch} hIcon={20}/>
+                    </div>
+                </div>
             </div>
-            <div className="min-w-[320px] max-md:w-full flex justify-between">
-                <Select label="Município" options={options.municipio} value={mun} onChange={setMun} width={'70%'}/>
-                <Select label="UF" options={options.uf} value={uf} onChange={setUf} width={'28%'}/>
-            </div>
-            <div className="min-w-[320px] max-md:w-full">
-                <Input label="Prestador" value={prest} onChange={setPrest} />
-                <Select label="Plano" options={options.plano} value={plano} onChange={setPlano} />
-                <Select label="Tipo de Estabelecimento" options={options.plano} />
-                <Select label="Área de atuação" options={options.plano} />
-            </div>
-            <div className="min-w-[320px] max-md:w-full flex justify-between">
-                <Button label="Limpar" onclick={handleClear} color="#f37920" icon={faEraser} hIcon={20}/>
-                <Button label="Buscar" color="#00985c" icon={faSearch} hIcon={20}/>
-            </div>   
+        
+            
+            
+
         </div>       
     )
 }
