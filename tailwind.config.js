@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         verdeUnimed: '#00985c',
         laranjaUnimed: '#F37920',
+        input:'#FAFAFA',
       },
       fontFamily: {
         'UnimedSans' : 'UnimedSans',

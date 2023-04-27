@@ -5,13 +5,16 @@ import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
 
+interface NavProps {
+  handleBusca: () => void;
+}
 
-export default function Nav({handleBuscaVisivel}:any){
+export default function Nav({ handleBusca}: NavProps){
     const [iconeClicado, setIconeClicado] = useState(faTimes);
 
     function handleIconeClicado() {
         setIconeClicado(iconeClicado === faTimes ? faBars : faTimes);
-        handleBuscaVisivel();
+        handleBusca();
     }
     return(
         <div className="bg-verdeUnimed h-[80px] flex items-center justify-between px-[5%]">
