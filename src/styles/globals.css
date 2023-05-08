@@ -11,3 +11,17 @@
     font-family: 'UnimedSlab';
     src: url(../../assets/fonts/UnimedSlab-Regular.otf);
 }
+
+@font-face {
+    font-family: 'UnimedSansBlack';
+    src: url(../../assets/fonts/UnimedSans-Black.otf);
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0.25rem;
+  }
+  
+  .hide-scroll-bar::-webkit-scrollbar-thumb {
+    background-color: #718096;
+  }

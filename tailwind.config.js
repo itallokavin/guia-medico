@@ -9,12 +9,14 @@ module.exports = {
     extend: {
       colors: {
         verdeUnimed: '#00985c',
+        verdeClaro: '#b1d249',
         laranjaUnimed: '#F37920',
         input:'#FAFAFA',
       },
       fontFamily: {
         'UnimedSans' : 'UnimedSans',
-        'UnimedSlab' : 'UnimedSlab'
+        'UnimedSlab' : 'UnimedSlab',
+        'UnimedSansBlack' : 'UnimedSansBlack',
       },
     },
   },
