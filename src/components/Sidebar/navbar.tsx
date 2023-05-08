@@ -9,13 +9,16 @@ import Select from "../FormsInput/select"
 import Input from "../FormsInput/input"
 import Button from "../FormsButton/button"
 
-export default function Navbar(){
+export type IconType = typeof faBars | typeof faClose;
+interface NavbarProps {
+  icon: IconType;
+  setIcon: (icon: IconType) => void;
+}
 
-    const [icon, setIcon] = useState(faClose)
+export default function Navbar({ icon, setIcon }: NavbarProps){
 
     function handleClick(){
       setIcon( icon === faBars ? faClose : faBars);
-      
     }
 
     return(
