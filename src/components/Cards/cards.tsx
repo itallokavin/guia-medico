@@ -10,10 +10,10 @@ type Props = {
 export default function Cards({name,especialidade,endereco,bairro,tel,cep}:Props){
     return(
         <>
-            <div className="w-[290px] max-h-[160px] max-sm:w-full shadow-xl rounded-lg">
+            <div className="shadow-xl rounded-lg w-[400px] max-2xl:w-[380px] max-xl:w-[300px] max-lg:w-[400px] max-md:w-full">
                 <div className="bg-verdeUnimed text-white p-2 rounded-t-lg">
-                    <p className="font-UnimedSansBlack text-[18px]">{name}</p>
-                    <p className="font-UnimedSans text-[13px]">{especialidade}</p>
+                    <p className="font-UnimedSansBlack text-[16px]">{name}</p>
+                    <p className="font-UnimedSans text-[12px]">{especialidade}</p>
                 </div>
                 <div className="p-2">
                     <p className="text-[13px]">{endereco}</p>

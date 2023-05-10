@@ -14,9 +14,9 @@ interface Props {
 }
 
 export default function Sidebar(){
-
-  const [esp, setEsp] = useState<Props[]>([])
   
+  const [esp, setEsp] = useState<Props[]>([])
+  {/*
   useEffect(() =>{
     async function FetchData(){
       const req = await fetch(`http://localhost:3002/filter/especialidade`)
@@ -25,34 +25,41 @@ export default function Sidebar(){
     }
     FetchData()
   },[])
-  
+  */}
   return(
     <>  
-      <div className="bg-verdeUnimed w-[290px] h-screen overflow-y-auto hide-scroll-bar">
-        <div className="flex justify-center p-4">
-          <Image alt="logo" src={Logo} width={200}/>
+      <div className="bg-verdeUnimed w-[320px] min-h-screen">
+
+        <div className="flex justify-center">
+          <div className="w-[60%] py-4 xl:w-[70%]">
+            <Image alt="logo" src={Logo}/>
+          </div>
         </div>
-        <div className="flex justify-center p-4">
-          <p className="font-UnimedSansBlack text-white text-[30px] ">Guia Médico</p>
+
+        <div className="text-center xl:py-6">
+          <p className="font-UnimedSansBlack tracking-wider text-white text-[28px] xl:text-[30px] ">Guia Médico</p>
         </div>
-        <div>
+
+        <div className="">
           <Select label="Especialidade" options={esp.map((e) => (e.ESPECIALIDADE))} />
           <Input  label="Prestador"/>
-          <div className="w-[240px] m-auto flex justify-between">
+          <div className="w-[280px] m-auto flex justify-between">
             <Select label="Município" width={'70%'} />
             <Select label="UF" width={'25%'} />
           </div>
-          <Select label="Área de atuação" />
           <Select label="Tipo de estabelecimento" />
-          <Select label="Plano" />
-          <div className="w-[240px] m-auto flex justify-between mt-3">
+          <div className="w-[280px] m-auto flex justify-between mt-3">
             <Button label="Limpar" icone={faEraser} />
             <Button label="Buscar" icone={faSearch} />
           </div>
-          <div className="flex justify-center p-10">
-            <Image alt="somoscoop" src={SomosCoop} width={200} />
+        </div>
+
+        <div className="flex justify-center items-center xl:py-10">
+          <div className="w-[60%] mt-3">
+            <Image alt="somoscoop" src={SomosCoop} />
           </div>
         </div>
+
       </div>
     </>
   )

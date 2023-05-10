@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Logo from "../../../assets/img/logo.png"
-import Somoscoop from "../../../assets/img/somoscoop_alt.png"
+import Somoscoop from "../../../assets/img/somoscoop.png"
 import { faClose, faEraser, faSearch } from "@fortawesome/free-solid-svg-icons"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -28,13 +28,14 @@ export default function Navbar({ icon, setIcon }: NavbarProps){
               <Image alt="logo unimed" src={Logo} width={150} />
             </div>
             <div className="flex items-center">
-              <FontAwesomeIcon icon={icon} fontSize={35} beat color="white" onClick={handleClick} />
+              <FontAwesomeIcon className="cursor-pointer" icon={icon} fontSize={35} beat color="white" onClick={handleClick} />
             </div>
           </div>
+
           {icon === faClose &&
-            <div>
-              <div className="flex justify-center mt-3 py-2">
-                <p className="text-[34px] font-UnimedSansBlack text-[#004E4C]">Guia Médico</p>
+            <div className="bg-verdeUnimed h-[calc(100vh-80px)]">
+              <div className="flex justify-center pt-10">
+                <p className="text-[34px] font-UnimedSansBlack text-[white]">Guia Médico</p>
               </div>
               <div className="px-[3%]">
                 <Select label="Especialidade" />
@@ -43,15 +44,15 @@ export default function Navbar({ icon, setIcon }: NavbarProps){
                   <Select label="Município" width={'70%'}/>
                   <Select label="UF" width={'25%'}/>
                 </div>
-                <Select label="Área de atuação" />
                 <Select label="Tipo de estabelecimento" />
-                <Select label="Plano" />
                 <div className="flex justify-between">
-                  <Button label="Limpar" icone={faEraser} iconSize={20} color="#F37920" />
-                  <Button label="Buscar" icone={faSearch} iconSize={20} color="#004E4C" />
+                  <Button label="Limpar" icone={faEraser} iconSize={20}  />
+                  <Button label="Buscar" icone={faSearch} iconSize={20}  />
                 </div>
-                <div className="flex justify-center p-3 ">
-                  <Image src={Somoscoop} alt="somoscoop"/>
+                <div className="flex justify-center py-10 ">
+                  <div className="w-[70%]">
+                    <Image src={Somoscoop} alt="somoscoop"/>
+                  </div>                  
                 </div>
               </div>
             </div>
